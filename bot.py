@@ -18,7 +18,6 @@ from selenium import webdriver
 from selenium.common.exceptions import StaleElementReferenceException
 
 ARMISTICE_PAUSE = 2
-TYPING_PAUSE = 0.01
 START_SLEEP = 5
 
 driver = webdriver.Chrome()
@@ -56,7 +55,6 @@ try:
                         for ind, (bit, sbit) in enumerate(
                                 zip(sol, crsol), 1):
                             if (bit == "1") ^ (sbit == "1"):
-                                sleep(TYPING_PAUSE)
                                 body.send_keys(str(ind))
 
                     else:
