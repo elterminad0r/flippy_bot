@@ -7,7 +7,8 @@ The constants defined at the start may need to be tweaked to suit your
 preference. I've also found that sometimes it starts spawning enemies at a
 ridiculous rate. I've yet to figure out why this is. I suspect it may be either
 due to flippy bit scaling enemy spawn rate with user input rate leading to a
-runaway exponential, or some anti-cheating mechanism.
+runaway exponential, or some anti-cheating mechanism. Another viable
+explanation is of course a gaping bug in my code.
 
 Apocalypse:
 
