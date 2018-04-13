@@ -38,8 +38,12 @@ minutes in. This means that my refresh rate would be:
 As an high-uncertainty estimate, this seems reasonable, so I consider this to
 be a satisfactory explanation of why this happens.
 
-Frustratingly, this result means that the best way to get a high score is to
-play flippy bit on a slower computer.
+Frustratingly, this result means that the best way to get a high score using
+the bot is to play flippy bit on a slower computer.
+
+However, if you as a human start to press as many keys as quickly as possible
+as soon as the program crashes, your score actually goes up very fast. This is
+because almost everything is on screen at once.
 
 Here is the resulting apocalypse:
 
