@@ -6,3 +6,7 @@ this. Change the browser at your own risk - I couldn't get firefox to work.
 The constants defined at the start may need to be tweaked to suit your
 preference. I've also found that sometimes it starts spawning enemies at a
 ridiculous rate. I've yet to figure out why this is.
+
+Apocalypse:
+
+![screenshot](https://github.com/elterminad0r/flippy_bot/blob/master/apocalypse.png)
