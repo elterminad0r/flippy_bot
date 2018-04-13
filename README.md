@@ -3,6 +3,8 @@ Flippy bit bot. It uses and was developed with the webdriver for Chromium. You
 will need to install the correct drivers for your browser if you want to run
 this. Change the browser at your own risk - I couldn't get firefox to work.
 
+It's of course also dependent on Selenium.
+
 The constants defined at the start may need to be tweaked to suit your
 preference/browser speed.
 
@@ -33,8 +35,11 @@ minutes in. This means that my refresh rate would be:
     (5000 - 80 * 30) / 150 / 0.2
     = 87 Hz
 
-As an estimate, this seems reasonable, so I consider this to be a satisfactory
-explanation of why this happens.
+As an high-uncertainty estimate, this seems reasonable, so I consider this to
+be a satisfactory explanation of why this happens.
+
+Frustratingly, this result means that the best way to get a high score is to
+play flippy bit on a slower computer.
 
 Here is the resulting apocalypse:
 
