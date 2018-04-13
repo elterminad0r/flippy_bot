@@ -12,8 +12,11 @@ due to really quite primitive way the game approaches difficulty scaling.
 Here are a selection of relevant screenshots of the game's JS code (`game.js`):
 
 ![screenshot](https://github.com/elterminad0r/flippy_bot/blob/master/screenshots/js_init.png)
+
 ![screenshot](https://github.com/elterminad0r/flippy_bot/blob/master/screenshots/cons_init.png)
+
 ![screenshot](https://github.com/elterminad0r/flippy_bot/blob/master/screenshots/js_attack.png)
+
 ![screenshot](https://github.com/elterminad0r/flippy_bot/blob/master/screenshots/js_cycle.png)
 
 Basically, the game initially sets the millisecond interval between enemies to
