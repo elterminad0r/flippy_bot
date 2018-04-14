@@ -21,6 +21,10 @@ Here are a selection of relevant screenshots of the game's JS code (`game.js`):
 
 ![screenshot](https://github.com/elterminad0r/flippy_bot/blob/master/screenshots/js_cycle.png)
 
+![screenshot](https://github.com/elterminad0r/flippy_bot/blob/master/screenshots/js_timeout.png)
+
+![screenshot](https://github.com/elterminad0r/flippy_bot/blob/master/screenshots/config_timeout.png)
+
 Basically, the game initially sets the millisecond interval between enemies to
 5000 ms. Whenever an enemy dies this interval is decreased by 30 ms, and
 whenever the game refreshed and the "cycle" function is called, the time is
@@ -33,10 +37,18 @@ On my laptop, this apocalypse happens at around 80 enemies, two and a half
 minutes in. This means that my refresh rate would be:
 
     (5000 - 80 * 30) / 150 / 0.2
-    = 87 Hz
+    ~ 87 Hz
 
-As an high-uncertainty estimate, this seems reasonable, so I consider this to
-be a satisfactory explanation of why this happens.
+As a high-uncertainty estimate, this seems reasonable. It also leads to a cycle time of
+
+    1 / 87
+    ~ 11-12 ms
+
+Reassuringly, this is more than 10 ms and would put the average execution speed
+of a cycle at a couple of ms.
+
+All in all, I consider this to be a satisfactory explanation of why this
+happens.
 
 Frustratingly, this result means that the best way to get a high score using
 the bot is to play flippy bit on a slower computer.
