@@ -56,8 +56,8 @@ try:
                     for ind, (bit, sbit) in enumerate(
                             zip(sol, crsol), 1):
                         # essentially, takes the xor of current state and
-                        # desired states, and XORs this with desired state.
-                        # Curr ^ (Des ^ Curr) === Des
+                        # desired states, and XORs this with current state.
+                        # NB: Curr ^ (Des ^ Curr) === Des
                         # This is essentially a 0-assumption approach, and
                         # results in very stable operation. It will happily
                         # keep running even if you change one of the bits.
@@ -65,7 +65,8 @@ try:
                             body.send_keys(str(ind))
 
             # to be on the safe side - this really only happens if an enemy
-            # dies that was for some reason being examined
+            # dies that was for some reason being examined due to a race
+            # condition
             except StaleElementReferenceException:
                 print("ignoring stale reference")
 
