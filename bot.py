@@ -36,12 +36,12 @@ curr_val = driver.find_element_by_id("attackValue")
 
 try:
     while True:
-        # find all enemies that haven't already been locked on to
-        enemies = [enm for enm in
-                        game.find_elements_by_css_selector("div.enemy")
-                        if "under-attack" not in enm.get_attribute("class")]
-        if enemies:
-            try:
+        try:
+            # find all enemies that haven't already been locked on to
+            enemies = [enm for enm in
+                            game.find_elements_by_css_selector("div.enemy")
+                            if "under-attack" not in enm.get_attribute("class")]
+            if enemies:
                 for enemy in enemies:
                     # generate solution for current enemy
                     sol = bin(int(enemy.text, 16))[2:].rjust(8, "0")
@@ -64,16 +64,17 @@ try:
                         if (bit == "1") ^ (sbit == "1"):
                             body.send_keys(str(ind))
 
-            # to be on the safe side - this really only happens if an enemy
-            # dies that was for some reason being examined due to a race
-            # condition
-            except StaleElementReferenceException:
-                print("ignoring stale reference")
+            # if no enemies are found, pause
+            else:
+                print("no enemies to be seen")
+                sleep(ARMISTICE_PAUSE)
 
-        # if no enemies are found, pause
-        else:
-            print("no enemies to be seen")
-            sleep(ARMISTICE_PAUSE)
+        # to be on the safe side - this really only happens if an enemy
+        # dies that was for some reason being examined due to a race
+        # condition
+        except StaleElementReferenceException:
+            print("ignoring stale reference")
+
 
 except KeyboardInterrupt:
     driver.close()
